@@ -8,6 +8,8 @@ jobs:
     runs-on: ubuntu-latest
     env:
       input: environment_variable
+      username: ${{ secrets.USERNAME }}
+      password: ${{ secrets.PASSWORD }}      
     steps:
       - name: Checkout
         uses: actions/checkout@v2
@@ -19,8 +21,8 @@ jobs:
         uses: docker/login-action@v1
         with:
           registry: sdai.jfrog.io
-          username: ${{ secrets.USERNAME }}
-          password: ${{ secrets.PASSWORD }}
+          username: username
+          password: password
       - name: Build and push
         id: docker_build
         uses: docker/build-push-action@v2
