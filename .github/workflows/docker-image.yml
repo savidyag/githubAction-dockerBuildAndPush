@@ -26,4 +26,3 @@ jobs:
         uses: docker/build-push-action@v2
         with:
           push: true
-          tags: sdai.jfrog.io/${{  github.ref_name }}
