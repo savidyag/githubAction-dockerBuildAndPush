@@ -6,6 +6,7 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    environment: Dev
     env:
       input: environment_variable
       username: ${{ secrets.USERNAME }}
