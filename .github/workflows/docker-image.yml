@@ -19,8 +19,8 @@ jobs:
         uses: docker/login-action@v1
         with:
           registry: sdai.jfrog.io
-          username: isparkes@sda-institute.com
-          password: Qg89TU2^xL
+          username: ${{ secrets.USERNAME }}
+          password: ${{ secrets.PASSWORD }}
       - name: Build and push
         id: docker_build
         uses: docker/build-push-action@v2
