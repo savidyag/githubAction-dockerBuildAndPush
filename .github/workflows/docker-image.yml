@@ -30,4 +30,4 @@ jobs:
         with:
           context: .
           push: true
-          tags: sdai.jfrog.io/docker/certification-validation-api_{{  github.ref_name }}:latest
+          tags: sdai.jfrog.io/docker/certification-validation-api_${{  github.ref_name }}:latest
